@@ -1,0 +1,8 @@
+,,,,,,,
+Table: Patients,Condition,Condition,Condition,Condition,Condition,Action,Action,Action,Action
+,treatmentStart == $param,hyperthensionRisk == $param,contraindicationACEI == $param,contraindicationARB == $param,coronaryArteryDisease == $param,aceiStart($param),arbStart($param),ccbStart($param),bbStart($param)
+27,TRUE,'niskie',FALSE,FALSE,FALSE,'NULL','NULL',,
+28,TRUE,'niskie',TRUE,FALSE,FALSE,,'NULL',,
+29,TRUE,'niskie',TRUE,TRUE,FALSE,,,'NULL',
+30,TRUE,'niskieeee',FALSE,FALSE,TRUE,'NULL','NULL',,'NULL'
+31,TRUE,'niskieeee',TRUE,FALSE,TRUE,,'NULL',,'NULL'

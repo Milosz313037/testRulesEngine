@@ -3,7 +3,7 @@ import Patient from './Patient';
 import trool from 'trool';
 
 
-const CSV_FILE_PATH = './MedicineRules.csv';
+const CSV_FILE_PATH = './exelrulestest.csv';
 
 
 interface IFactsHolder {
@@ -13,17 +13,21 @@ interface IFactsHolder {
 async function getMedicines(
   Patient: Patient,
 ): Promise<string> {
-  let medicines = 0;
+  // let medicines = 0;
+  let fun = 0;
   try {
     const facts = _setupFactsHolder(Patient),
       engine = await trool(CSV_FILE_PATH);
       const updatedFacts = engine.applyRules<IFactsHolder>(facts);
-      medicines = facts.Patients.medicines;
+      // medicines = facts.Patients.medicines;
+      fun = facts.Patients.startfunc;
   } catch (err) {
     logger.err(err, true);
-    medicines = -1;
+    // medicines = -1;
+    fun = -1;
   }
-  return ('wez tyle lekow ' + medicines);
+  return ``;
+  // return ('wez tyle lekow ' + medicines);
 }
 
 function _setupFactsHolder(

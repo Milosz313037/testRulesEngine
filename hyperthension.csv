@@ -1,0 +1,7 @@
+,,,,,,,
+Table: Patients,Condition,Condition,Condition,Action,Action
+,sugar >= $param,pulse >= $param,hyperthension == $param,takeMedicines($param),deleteMedicines($param)
+Take medicines -1 sugar >=,120,,,1,0
+Take medicines - 2 sugar >= && pulse >=,120,100,,2,1
+"Take medicines - 3 sugar >= && pulse >= && hyperthension == true
+",120,100,TRUE,3,2

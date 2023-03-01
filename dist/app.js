@@ -15,9 +15,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const jet_logger_1 = __importDefault(require("jet-logger"));
 const getMedicines_1 = __importDefault(require("./getMedicines"));
 const Patient_1 = __importDefault(require("./Patient"));
-const patient = new Patient_1.default(13, 0);
+const patient = new Patient_1.default(true, 'niskie', true, true, false);
+// ERROR: Error: Error on DecisionTable(Patients) : The operation must began with 
+// the Fact's attribute, contain one operator, and end with "$param". Operation: "sugar >= $param AND pulse <= $param AND hyperthension == $ param"
 (() => __awaiter(void 0, void 0, void 0, function* () {
-    const p = (total) => jet_logger_1.default.info('Medicines ' + total + '\n');
+    const p = (total) => jet_logger_1.default.info('finish ' + total + '\n');
     let medicinesToTake = yield (0, getMedicines_1.default)(patient);
     p(medicinesToTake);
 }))();
